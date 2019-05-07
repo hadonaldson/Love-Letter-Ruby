@@ -1,11 +1,9 @@
 # README
 
-Ruby version -> ruby-2.6.0
+Ruby on Rails version -> ruby-2.6.0
+Sqlite version -> sqlite3 ~> 1.3.13
+Vue.js version -> v2.2.0
+jQuery version -> jQuery v2.1.3
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+Database created using rails scaffolding
+Galley created using vue gallery
