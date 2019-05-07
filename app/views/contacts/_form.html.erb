@@ -1,0 +1,77 @@
+<%= form_with(model: contact, local: true) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wedding %>
+    <%= form.text_field :Wedding %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wedding Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Getting %>
+    <%= form.text_field :Getting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ready %>
+    <%= form.text_field :Ready %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Location %>
+    <%= form.text_field :Location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Service %>
+    <%= form.text_field :Service %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number %>
+    <%= form.text_field :Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :of %>
+    <%= form.text_field :of %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Services %>
+    <%= form.text_field :Services %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Comments %>
+    <%= form.text_area :Comments %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

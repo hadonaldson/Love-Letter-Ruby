@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<br>
+<div id="app">
+<img class="imageGallery" v-for="(image, i) in images" :src="image" @click="onClick(i)">
+<vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+</div>
+<br>
+
+<script type="text/javascript" src="https://unpkg.com/vue-gallery-slideshow@1.3.1/dist/js/vue-gallery-slideshow.min.js"></script>
+
+<script  type="text/javascript">
+
+
+var app=new Vue({
+   el:  '#app',
+   components: {
+     VueGallerySlideshow
+   },
+   data:
+   {
+     images: [
+        '/assets/Blossoms_Shoot_March_2016.jpg',
+        '/assets/barn.jpg',
+        '/assets/barrel_girls.jpg',
+        '/assets/20180217_101651.jpg',
+        '/assets/MiddleburgVAWeddingVickiGraftonPhotographyFineArtFilmPhotographer-12jpg.jpg',
+        '/assets/N4.jpg',
+        '/assets/Oatlands_SS_Finals_179.jpg',
+        '/assets/PhotoGrid_1455064764894.jpg',
+        '/assets/PhotoGrid_1455064834482.jpg',
+        '/assets/Screenshot_20170530-215203.png',
+        '/assets/Screenshot_20171218-212755.png',
+        '/assets/VickiGraftonPhotographyFineArtFilmMiddleburgWeddingPaperDivas-123.jpg',
+        '/assets/Winter_Wed.jpg'
+     ],
+     index: null
+   },
+   methods:{
+      onClick(i) {
+         var self =this;
+         self.index =i;
+      }
+   }
+})
+</script>
+

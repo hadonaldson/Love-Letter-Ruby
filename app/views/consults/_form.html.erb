@@ -1,0 +1,48 @@
+<%= form_with(model: consult, local: true) do |form| %>
+  <% if consult.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(consult.errors.count, "error") %> prohibited this consult from being saved:</h2>
+
+      <ul>
+      <% consult.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wedding_Date %>
+    <%= form.date_select :Wedding_Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Getting_Ready_Location %>
+    <%= form.text_field :Getting_Ready_Location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Service_Type %>
+    <%= form.text_field :Service_Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Services %>
+    <%= form.text_field :Number_of_Services %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Comments %>
+    <%= form.text_area :Comments %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>

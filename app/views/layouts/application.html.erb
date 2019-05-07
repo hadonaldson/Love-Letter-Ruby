@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Love Letters By Kayla</title>
+  
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag "vue", "jquery-2.1.3.min" %>
+    </head>
+
+  <body>
+    <div class='header'>
+           <h1>Love Letters By Kayla</h1>
+           <h3>Hair and Makeup for Weddings and Special Occassions</h3>
+    </div>
+
+    <div class='topnav'>
+        <%= link_to 'Home', home_path %>
+        <%= link_to 'About', about_path %>
+        <%= link_to 'Portfolio', pictures_path %>
+        <%= link_to 'Raves & Reviews', 'https://www.weddingwire.com/biz/love-letters-by-kayla-manassas/eb93c8134dd8b4e8.html', :target => '_blank' %>
+        <%= link_to 'Contact Us', new_consult_path %>
+    </div>   
+
+    <%= yield %>
+
+    <div class='footer'>
+      <div class='row'>
+        <div class='column'>
+          <p>Location</p>
+          <p>Based out of Manassas, VA</p>
+          <p>Serving DC, Virginia and Worldwide</p>
+        </div>
+        <div class='column'>
+           <p>Contact</p>
+           <p>loveletters-bykayla@gmail.com</p>
+        </div>
+        <div class='column'>
+          <p>Follow</p>
+          <p>Facebook</p>
+          <p>Instagram</p>
+        </div>
+     </div>
+    </div>
+
+  </body>
+</html>
