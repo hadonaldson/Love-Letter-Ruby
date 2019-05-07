@@ -1,0 +1,8 @@
+{
+  "name": "LLBK_Project",
+  "private": true,
+  "dependencies": {
+    "vue-gallery": "^2.0.0",
+    "vue-gallery-slideshow": "^1.3.1"
+  }
+}
